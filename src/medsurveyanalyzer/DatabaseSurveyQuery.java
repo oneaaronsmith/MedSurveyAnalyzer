@@ -21,6 +21,14 @@ public class DatabaseSurveyQuery extends DatabaseManager{
         return count;
     }
     
+    public int getSQLCount(String sqlstatement) {
+        //Returns the number of rows given from the specific SQL query.
+        int count;
+        DatabaseManager manage = new DatabaseManager();
+        count = manage.selectCount(sqlstatement);
+        return count;
+    }
+    
     public int getDrugQuestionedCount() {
         //Returns the number of surveys in which patients were asked about drug use.
         int count;

@@ -17,6 +17,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -32,6 +33,9 @@ public class MedSurveyAnalysisPageController extends SceneSwitcher implements In
     
     @FXML
     private TextArea report;
+   
+    @FXML
+    private TextField sqlsearch;
     
     @FXML
     private void handleButtonGoHome(ActionEvent event) {
@@ -212,6 +216,16 @@ public class MedSurveyAnalysisPageController extends SceneSwitcher implements In
     private void handleButtonQuit(ActionEvent event) {
         Stage stage = (Stage)report.getScene().getWindow();
         stage.close();
+    }
+    
+    @FXML
+    private void handleButtonSQLSearch() {
+        DatabaseSurveyQuery request = new DatabaseSurveyQuery();
+        String search = sqlsearch.getText();
+        System.out.println(search);
+        int numrows = request.getSQLCount(search);
+        String reporttext = "The number of surveys that match your query is " + numrows;
+        report.setText(reporttext);
     }
     
     @Override
