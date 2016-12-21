@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="880.0" prefWidth="1207.0" style="-fx-background-color: #222930;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medsurveyanalyzer.MedSurveyFXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Text fill="#e9e9e9" layoutX="65.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MedZou Survey Analyzer" wrappingWidth="1076.6708984375">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="96.0" />
+         </font>
+      </Text>
+      <Button fx:id="quit" layoutX="419.0" layoutY="611.0" mnemonicParsing="false" onAction="#handleButtonQuit" prefHeight="68.0" prefWidth="368.0" style="-fx-background-color: #4EB1BA;" text="Quit" textFill="#e9e9e9">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+         </font></Button>
+      <Button fx:id="button1" layoutX="419.0" layoutY="440.0" onAction="#handleButtonAnalyze" prefHeight="68.0" prefWidth="368.0" style="-fx-background-color: #4EB1BA;" text="Analyze Survey Data" textFill="#e9e9e9">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+         </font></Button>
+      <Button fx:id="button2" layoutX="419.0" layoutY="527.0" onAction="#handleButtonAbout" prefHeight="68.0" prefWidth="368.0" style="-fx-background-color: #4EB1BA;" text="About" textFill="#e9e9e9">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+         </font></Button>
+      <ImageView fitHeight="238.0" fitWidth="264.0" layoutX="484.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@health-icon.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
